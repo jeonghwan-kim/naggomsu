@@ -1,3 +1,12 @@
+a {	
+	text-decoration: none;
+	color: blue;
+}	
+
+a:hover {	
+	color: #222
+}
+
 body {
     background-color: #ddd; /* Background color */
     color: #222; /* Foreground color used for text */
@@ -10,9 +19,9 @@ body {
 div {
 	margin-top: 10px;
 	text-align: center;
-	width: 800px;
-	margin-left:auto;
-	margin-right:auto;
+	width: 800px; 		/* pc만 너비를 지정함, 모바일에서는 미지정 */
+	margin-left:auto;	/* 이곳도 마찬가지다. 가운데 맞춤을 위한   */
+	margin-right:auto;  /* 작업								 */
 }
 
 ul {

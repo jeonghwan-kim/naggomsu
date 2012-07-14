@@ -1,3 +1,12 @@
+a {	
+	text-decoration: none;
+	color: blue;
+}	
+
+a:hover {	
+	color: #222
+}
+
 body {
     background-color: #ddd; /* Background color */
     color: #222; /* Foreground color used for text */
