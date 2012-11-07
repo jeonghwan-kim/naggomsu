@@ -8,9 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="pc.css" media="screen and (min-width: 481px)" />
     <script type="text/javascript">
         var currentItemNum = 0;
-        var itemsPerPage = 7;
+        var itemsPerTime = 7;
+
+		// show items (currentItem ~ currentItem + itemsPerTime)
         function showItem() {
-            for (var i = currentItemNum; i < currentItemNum + itemsPerPage; i++) {
+            for (var i = currentItemNum; i < currentItemNum + itemsPerTime; i++) {
                 document.getElementById(i).style.display = "block"; // default is "none"
             }
             currentItemNum = i;
@@ -58,7 +60,7 @@
             } ?>
 
         </ul>	
-        <input type="button" value="더보기" onclick="showItem();"/>
+        <input type="button" value="더보기" onclick="showItem();scrollBy(0, 5 * 70);"/>
 	</div>
 </body>
 </html>
