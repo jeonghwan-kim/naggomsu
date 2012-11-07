@@ -60,7 +60,7 @@
             } ?>
 
         </ul>	
-        <input type="button" value="더보기" onclick="showItem();scrollBy(0, 5 * 70);"/>
+        <input type="button" value="More" onclick="showItem();scrollBy(0, 5 * 70);"/>
 	</div>
 </body>
 </html>
