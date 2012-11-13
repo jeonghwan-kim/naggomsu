@@ -9,17 +9,37 @@
     <script type="text/javascript">
         var currentItemNum = 0;
         var itemsPerTime = 7;
-
+		var animationCount = 0;
+		var timerID;
+		
 		// show items (currentItem ~ currentItem + itemsPerTime)
         function showItem() {
-            for (var i = currentItemNum; i < currentItemNum + itemsPerTime; i++) {
-                document.getElementById(i).style.display = "block"; // default is "none"
-            }
-            currentItemNum = i;
-        }   
+			currentItemNum++;
+			if (!document.getElementById(currentItemNum)) return;
+			document.getElementById(currentItemNum).style.display = "block"; // default:"none"				
+			
+			animationCount++;
+			
+			if (animationCount >= itemsPerTime) {
+				clearInterval(timerID);
+				animationCount = 0;				
+			}			
+        }   		
+		
+		// callback function (animation show)
+		function more() {
+			timerID = setInterval(function() {
+				showItem();
+				}, 50);										
+		}
+		
+		window.onload = function() {
+			for (var i = 0; i < 15; i++) 
+				showItem();
+		}
     </script>
 </head>
-<body onload="showItem();">
+<body>
 <?php // load rss library 
 	require_once 'magpierss/rss_fetch.inc';    // rss library	
 	define('MAGPIE_OUTPUT_ENCODING', 'UTF-8'); // setting language to Korean
@@ -60,7 +80,7 @@
             } ?>
 
         </ul>	
-        <input type="button" value="More" onclick="showItem();scrollBy(0, 5 * 70);"/>
+        <input type="button" value="More" onclick="more();scrollBy(0, 400);"/>
 	</div>
 </body>
 </html>
