@@ -80,7 +80,7 @@
             } ?>
 
         </ul>	
-        <input type="button" value="More" onclick="more();scrollBy(0, 400);"/>
+        <input type="button" value="More" onclick="more();scrollBy(0, 100);"/>
 	</div>
 </body>
 </html>
