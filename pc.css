@@ -39,7 +39,7 @@ ul li  {
     margin-bottom: -1px;
     padding: 12px 10px;
     text-decoration: none;
-	text-align: left;
+	text-align: left;	
 }
 ul li:hover {
     background-color: #ddd;
@@ -54,10 +54,10 @@ ul li:hover {
 }
 
 ul li:first-child  {
-    -webkit-border-top-left-radius: 8px;
-    -webkit-border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 }
 ul li:last-child  {
-    -webkit-border-bottom-left-radius: 8px;
-    -webkit-border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;	
 }

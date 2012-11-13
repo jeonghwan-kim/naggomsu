@@ -42,7 +42,7 @@
 
 	<div>
 	    <!-- show title -->
-	    <h1>나꼼수 듣기</h1>
+	    <h1><a href="./index.php">나꼼수 듣기</a></h1>
 
         <!-- show content -->
 	    <ul>   
