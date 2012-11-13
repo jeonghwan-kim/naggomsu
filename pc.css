@@ -1,11 +1,15 @@
-a {	
+h1 a {	
 	text-decoration: none;
-	color: blue;
+	color: black;
+	border-radius: 4px;
+	padding: 2px;
+	animation:myTitle 5s;
+	transition: background-color .5s;
 }	
 
-a:hover {	
-	color: #222
-}
+h1 a:hover {	
+	background-color: #A53389;
+}	
 
 body {
     background-color: #ddd; /* Background color */
@@ -42,7 +46,7 @@ ul li  {
 	text-align: left;	
 }
 ul li:hover {
-    background-color: #ddd;
+    background-color: #DDD;
     border: 1px solid #999999;
     color: #222222;
     display: block; 
@@ -53,11 +57,24 @@ ul li:hover {
     text-decoration: none;
 }
 
-ul li:first-child  {
+ul  li:first-child  {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }
 ul li:last-child  {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;	
+}
+
+ul li a { /* Download button */
+	text-decoration: none;
+	font-size: 70%;
+	border-radius: 4px;
+	padding: 4px;	
+	background-color: #A53389;
+	color: #FFFFFF;	
+}
+
+ul li a:hover { /* Download button */
+	box-shadow: 10px 10px 5px #ddd;
 }

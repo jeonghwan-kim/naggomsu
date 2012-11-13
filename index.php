@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="pc.css" media="screen and (min-width: 481px)" />
     <script type="text/javascript">
         var currentItemNum = 0;
-        var itemsPerTime = 7;
+        var itemsPerTime = 10;
 		var animationCount = 0;
 		var timerID;
 		
@@ -30,11 +30,13 @@
 		function more() {
 			timerID = setInterval(function() {
 				showItem();
-				}, 50);										
+				}, 50);		
+				
+			scrollBy(0,100); 
 		}
 		
 		window.onload = function() {
-			for (var i = 0; i < 15; i++) 
+			for (var i = 0; i < 10; i++) 
 				showItem();
 		}
     </script>
@@ -74,13 +76,13 @@
                 $audio_url	= $item[audio_url];	?>
     
                 <?php echo '<li id="'. $i .'">' . $title . ': '. $subtitle; ?>
-                <a href="<?php echo $audio_url; ?>">(듣기)</a> 
+                <a href="<?php echo $audio_url; ?>">Download</a> 
                 </li>
                 <?php $i++;
             } ?>
 
         </ul>	
-        <input type="button" value="More" onclick="more();scrollBy(0, 100);"/>
+        <input type="button" value="More" onclick="more();"/>
 	</div>
 </body>
 </html>
