@@ -6,49 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 	<link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-width: 480px)" />
 	<link rel="stylesheet" type="text/css" href="pc.css" media="screen and (min-width: 481px)" />
-    <script type="text/javascript">
-        var currentItemNum = 0;
-        var itemsPerTime = 10;
-		var animationCount = 0;
-		var timerID;
-		
-		// show items (currentItem ~ currentItem + itemsPerTime)
-        function showItem() {
-			currentItemNum++;
-			if (!document.getElementById(currentItemNum)) return;
-			document.getElementById(currentItemNum).style.display = "block"; // default:"none"
-
-			// odd row: FFFFFF, even row: F5FAFF
-			if (currentItemNum % 2) {
-				document.getElementById(currentItemNum).style.background = "#F8F8F8";
-			} else {
-				document.getElementById(currentItemNum).style.background = "#FFFFFF";
-			}
-			
-			animationCount++;
-			
-			// ending condition
-			if (animationCount >= itemsPerTime) {
-				clearInterval(timerID);
-				animationCount = 0;				
-			}			
-        }   		
-		
-		// callback function (animation show)
-		function more() {
-			timerID = setInterval(function() {
-				showItem();
-				}, 50);		
-				
-			scrollBy(0,1000); // it is not work perfectly
-		}
-		
-		window.onload = more; //function() {
-	//		for (var i = 0; i < 10; i++) 
-		//		showItem();
-			
-	//	}
-    </script>
+    <script type="text/javascript" src="naggomsu.js"></script>
 </head>
 <body>
 <?php // load rss library 
@@ -73,7 +31,7 @@
 
 	<div>
 	    <!-- show title -->
-	    <h1><a href="./index.php">NaGgomSu</a></h1>
+	    <h1><a href="./index.php">NaGGomSu</a></h1>
 
         <!-- show content -->
 	    <ul>   
@@ -89,7 +47,6 @@
                 </li>
                 <?php $i++;
             } ?>
-
         </ul>	
         <input type="button" value="More" onclick="more();"/>
 	</div>

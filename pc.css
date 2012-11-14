@@ -2,8 +2,6 @@ h1 a {
 	text-decoration: none;
 	color: #2570BA;
 }	
-
-
 body {
     background-color: #FFF; /* Background color */
     color: #222; /* Foreground color used for text */
@@ -12,14 +10,11 @@ body {
     padding: 0; /* Amount of negative space around the inside of the body */
 	margin: 0;
 }
-
 div {
-	margin-top: 10px;
 	text-align: center;
 	width: 800px; 		/* pc만 너비를 지정함, 모바일에서는 미지정 */
-	margin:0 auto;	/* 이곳도 마찬가지다. 가운데 맞춤을 위한 작업 */
+	margin:10px auto;	/* 이곳도 마찬가지다. 가운데 맞춤을 위한 작업 */
 }
-
 ul {
     list-style: none;
     margin: 10px;
@@ -47,16 +42,6 @@ ul li:hover {
     padding: 12px 10px;
     text-decoration: none;
 }
-
-ul  li:first-child  {
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-}
-ul li:last-child  {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;	
-}
-
 ul li a { /* Download button */
 	text-decoration: none;
 	font-size: 65%;
@@ -66,7 +51,6 @@ ul li a { /* Download button */
 	color: #FFFFFF;
 	transition: background-color .3s;
 }
-
 ul li a:hover { /* Download button */
 	background-color: #993399;
 }
