@@ -16,10 +16,18 @@
         function showItem() {
 			currentItemNum++;
 			if (!document.getElementById(currentItemNum)) return;
-			document.getElementById(currentItemNum).style.display = "block"; // default:"none"				
+			document.getElementById(currentItemNum).style.display = "block"; // default:"none"
+
+			// odd row: FFFFFF, even row: F5FAFF
+			if (currentItemNum % 2) {
+				document.getElementById(currentItemNum).style.background = "#F8F8F8";
+			} else {
+				document.getElementById(currentItemNum).style.background = "#FFFFFF";
+			}
 			
 			animationCount++;
 			
+			// ending condition
 			if (animationCount >= itemsPerTime) {
 				clearInterval(timerID);
 				animationCount = 0;				
@@ -32,13 +40,14 @@
 				showItem();
 				}, 50);		
 				
-			scrollBy(0,100); 
+			scrollBy(0,1000); // it is not work perfectly
 		}
 		
-		window.onload = function() {
-			for (var i = 0; i < 10; i++) 
-				showItem();
-		}
+		window.onload = more; //function() {
+	//		for (var i = 0; i < 10; i++) 
+		//		showItem();
+			
+	//	}
     </script>
 </head>
 <body>
@@ -64,7 +73,7 @@
 
 	<div>
 	    <!-- show title -->
-	    <h1><a href="./index.php">나꼼수 듣기</a></h1>
+	    <h1><a href="./index.php">NaGgomSu</a></h1>
 
         <!-- show content -->
 	    <ul>   

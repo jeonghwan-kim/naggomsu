@@ -1,18 +1,11 @@
 h1 a {	
 	text-decoration: none;
-	color: black;
-	border-radius: 4px;
-	padding: 2px;
-	animation:myTitle 5s;
-	transition: background-color .5s;
+	color: #2570BA;
 }	
 
-h1 a:hover {	
-	background-color: #A53389;
-}	
 
 body {
-    background-color: #ddd; /* Background color */
+    background-color: #FFF; /* Background color */
     color: #222; /* Foreground color used for text */
     font-family: Helvetica;
     font-size: 14px;
@@ -24,8 +17,7 @@ div {
 	margin-top: 10px;
 	text-align: center;
 	width: 800px; 		/* pc만 너비를 지정함, 모바일에서는 미지정 */
-	margin-left:auto;	/* 이곳도 마찬가지다. 가운데 맞춤을 위한   */
-	margin-right:auto;  /* 작업								 */
+	margin:0 auto;	/* 이곳도 마찬가지다. 가운데 맞춤을 위한 작업 */
 }
 
 ul {
@@ -34,9 +26,10 @@ ul {
     padding: 0;
 }
 ul li  {
-    background-color: #FFFFFF;
-    border: 1px solid #999999;
-    color: #222222;
+    /*background-color: #E9F1F8;*/
+    border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+    color: #666;
     display: none; 
     font-size: 17px;
     font-weight: bold;
@@ -46,8 +39,6 @@ ul li  {
 	text-align: left;	
 }
 ul li:hover {
-    background-color: #DDD;
-    border: 1px solid #999999;
     color: #222222;
     display: block; 
     font-size: 17px;
@@ -68,13 +59,14 @@ ul li:last-child  {
 
 ul li a { /* Download button */
 	text-decoration: none;
-	font-size: 70%;
+	font-size: 65%;
 	border-radius: 4px;
 	padding: 4px;	
-	background-color: #A53389;
-	color: #FFFFFF;	
+	background-color: #6699FF;
+	color: #FFFFFF;
+	transition: background-color .3s;
 }
 
 ul li a:hover { /* Download button */
-	box-shadow: 10px 10px 5px #ddd;
+	background-color: #993399;
 }
