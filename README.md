@@ -5,7 +5,7 @@ Title
 http://jeonghwankim.ivyro.net/naggomsu
 
 
-버전별 특징
+Versions
 ==========
 v0.1
 ----
