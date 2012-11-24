@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>NaGGomSu</title>	
-	<meta name="viewport" content="user-scalable=no, width=device-width" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="user-scalable=no, width=device-width" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" /> 
 	<link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-width: 480px)" />
 	<link rel="stylesheet" type="text/css" href="pc.css" media="screen and (min-width: 481px)" />
     <script type="text/javascript" src="view.js"></script>
@@ -11,12 +11,41 @@
 <body>
 <div id="wrapper">
 	<!-- show title -->
-	<h1><a href="./index.php">NaGGomSu</a></h1>
-
-	<!-- show content -->
-	<div id="list"></div>	
-	<input type="button" value="More" onclick="more();" />
+	<div id="top">
+		<h1><a href="./">NaGGomSu</a></h1>
+	</div>
 	
-</div>
+	<div id="left" onclick="left();">
+	<
+	</div>
+	
+	<!-- show content -->
+	<div id="center">
+		<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>		
+		</ul>
+	</div>	
+
+	<div id="right" onclick="right();">
+	>
+	</div>
+
+	<div id="footer">
+	</div>
+</div> <!-- end of wrapper -->
 </body>
 </html>
