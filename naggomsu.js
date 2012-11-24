@@ -6,8 +6,6 @@ var timerID;    // 애니메이션 동작시 타이머 id
 
 // 아이템을 itemPerTime개 만큼 보여준다.
 function showItem() {
-    currentItemNum++;
-    
     // 객체의 스타일 속성을 block으로 지정 
     // html 객체가 로딩되어 있으나 스타일 속성이 none으로 되어있어 보이지 않을 뿐임
     if (!document.getElementById(currentItemNum)) {
@@ -24,7 +22,9 @@ function showItem() {
         document.getElementById(currentItemNum).style.background = "#FFFFFF";
     }
     
-    // itemsPerTime개 만큼 보였줬으면 타이머 종료
+    currentItemNum++;
+
+// itemsPerTime개 만큼 보였줬으면 타이머 종료
     if (++animationCount >= itemsPerTime) { 
         clearInterval(timerID);
         animationCount = 0;				
