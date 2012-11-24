@@ -1,5 +1,3 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-
 <?php
 require_once 'magpierss/rss_fetch.inc'; // rss library
 define('MAGPIE_OUTPUT_ENCODING', 'UTF-8'); // setting language to Korean

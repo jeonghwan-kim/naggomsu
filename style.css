@@ -69,5 +69,5 @@ body {
 	transition: background-color .3s;
 }
 #center ul li a:hover { /* Download button */
-background-color: #993399;
+	background-color: #993399;
 }

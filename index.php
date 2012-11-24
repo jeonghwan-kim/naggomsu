@@ -4,22 +4,20 @@
 	<title>NaGGomSu</title>	
 	<meta name="viewport" content="user-scalable=no, width=device-width" />	
 	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" /> 
-	<link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-width: 480px)" />
-	<link rel="stylesheet" type="text/css" href="pc.css" media="screen and (min-width: 481px)" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="view.js"></script>
 </head>
 <body>
 <div id="wrapper">
-	<!-- show title -->
+
 	<div id="top">
 		<h1><a href="./">NaGGomSu</a></h1>
 	</div>
 	
-	<div id="left" onclick="left();">
+	<div id="left">
 	<
 	</div>
 	
-	<!-- show content -->
 	<div id="center">
 		<ul>
 		<li></li>
@@ -40,11 +38,8 @@
 		</ul>
 	</div>	
 
-	<div id="right" onclick="right();">
+	<div id="right">
 	>
-	</div>
-
-	<div id="footer">
 	</div>
 </div> <!-- end of wrapper -->
 </body>
