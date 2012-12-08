@@ -4,9 +4,14 @@ var is_last_page = false; 	// 마지막 페이지 체크 변수
 
 // 문서 로딩시 호출 
 window.onload = function() {
+    // 타이틀 애니메이션
+    $("#top h1").css("opacity", "0");
+    $("#top h1").animate({opacity:'1'}, 1000);
+
+    // 아이템 로딩
 	loadRssItems(item_num);  
-	document.getElementById("left").onclick = left;
-	document.getElementById("right").onclick = right;
+	$("#left").click(left); // left 버튼
+	$("#right").click(right); // right 버튼
 }
 
 // rss 항목 로딩하는 함수 (pos부터 size개만큼 로딩함)
@@ -25,7 +30,7 @@ function loadRssItems(num) {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					// xml element 및 html element 얻기 (xml elem -> html elem 복사)
 					var entries = xmlhttp.responseXML.getElementsByTagName("entry");
-					var list_elements = document.getElementsByTagName("li");
+                    var list_elements = $("li");
 					
 					// 이전화면 비우기
 					for (var i = 0; i < item_num; i++) 
@@ -39,6 +44,10 @@ function loadRssItems(num) {
 						list_elements[i].innerHTML = title + " - " + subtitle 
 							+ " <a href='" + audio_url + "'>Download</a>";
 					}
+					
+					// 에니메이션 출력
+					$("#center").css("display", "none");
+					$("#center").fadeIn(200);
 					
 					// 마지막 페이지인지 검사
 					is_last_page = (entries.length < item_num) ? true : false;

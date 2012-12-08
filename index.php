@@ -5,6 +5,7 @@
 	<meta name="viewport" content="user-scalable=no, width=device-width" />	
 	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" /> 
 	<link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="view.js"></script>
 </head>
 <body>
